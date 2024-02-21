@@ -18,17 +18,41 @@ class Currency:
     #add magic methods here
     def __repr__(self):
     # This method returns the string to be printed. This should be the value rounded to two digits, accompanied by its acronym.
-        pass
+        return f"{round(self.value,2)}{self.unit}"
+
     def __str__(self):
     #This method returns the same value as __repr__(self).
-        pass
+        return f"{round(self.value,2)}{self.unit}"
     
     def __add__(self,other):
-    #Defines the '+' operator. If other is a Currency object, the currency values are added and the result will be the unit of self. If other is an int or a float, other will be treated as a USD value.
+    #Defines the '+' operator. If OTHER is a Currency object, the currency VALUES are added and the result will be the unit of SELF. If OTHER is an INT or a FLOAT, the OTHER will be treated as a USD value.
+        if type(other) == int or type(other) == float:
+            x = (other * Currency.currencies[self.unit])
+        else:
+            x = (other.value / Currency.currencies[other.unit] * Currency.currencies[self.unit])
+            return Currency(x + self.value, self.unit)
+        
+    def __iadd__(self, other):
+        # Similar to __add__
+        return Currency.__add__(self, other)
+    
+    def __radd__(self, other):
+        res =  self + other
+        if self.unit != "USD":
+            res.changeTo("USD")
+        return res
+    
+    def __sub__(self, other):
+        # Defines the '-' operator. If the OTHER is a Currency object the currency VALUES are SUBTRACTED and the result will be the unit of the SELF. If the OTHER is an INT or FLOAT, the OTHER will be treated as an USD value.
+        if type(other) == int or type(other) == float:
+            x = (other * Currency.currencies[self.unit])
+        else:
+            x = (other.value /  Currency.currencies[other.unit] * Currency.currencies[self.unit])
+            return Currency(self.value - x, self.unit)
+
+    def __isub__(self, other):
+        # Similar to __sub__   
         pass
-                
-      
-  
 
 v1 = Currency(23.43, "EUR")
 v2 = Currency(19.97, "USD")
