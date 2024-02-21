@@ -31,11 +31,28 @@ class SebulbasPod(Podracer):
 
 
 """
+
 Make sure to answer the following prompts about your coding experience:
 
 Q1. How does this solution demonstrate the four pillars of OOP? (It may not demonstrate all of them, describe only those that apply)
+    A. This solution demonstrates two pillars of Object-Oriented Programming (OOP):
+    
+    Encapsulation: Each class encapsulates its own data (attributes) and behaviors (methods). Attributes like max_speed, condition, and price are encapsulated within their respective classes (Podracer, AnakinsPod, SebulbasPod), and methods like repair, boost, and flame_jet provide controlled access to manipulate these attributes. Encapsulation helps in managing complexity by hiding internal implementation details and exposing only necessary interfaces to interact with objects.
+    
+    Inheritance: AnakinsPod and SebulbasPod classes inherit from the base class Podracer. This inheritance relationship allows them to inherit attributes and methods from Podracer and extend or modify them as needed. For example, AnakinsPod inherits the repair method from Podracer and adds a new method boost, while SebulbasPod inherits the repair method and adds a new method flame_jet. Inheritance promotes code reusability and supports hierarchical classification, where specialized classes can be created from a more general superclass.
 
+    
 Q2. Would it have been easier to implement a solution to this problem using a different coding style? Why or why not?
+    A. Using Object-Oriented Programming (OOP) for this problem offers several benefits:
+    
+    Modularity: OOP allows breaking down the problem into smaller, manageable components (classes), each representing a distinct entity (Podracer, AnakinsPod, SebulbasPod). This promotes independent development, testing, and maintenance of these components.
+    
+    Abstraction: OOP promotes abstraction by focusing on the essential characteristics of objects while hiding unnecessary details. The classes abstract away the complexity of managing podracer inventory by providing a clear interface (attributes and methods) for interacting with the objects.
+    
+    Flexibility and Extensibility: OOP facilitates easy extension and modification of the system. New types of podracer classes can be added in the future by creating new subclasses or modifying existing ones without impacting the overall system architecture. This enhances the system's adaptability to changing requirements.
 
+    
 Q3. How in particular did Object Oriented Programming assist in the solving of this problem?
+    A. Overall, Object-Oriented Programming assists in solving this problem by providing a structured and modular approach to designing and implementing the system, promoting code reuse, maintainability, and scalability.
+
 """
