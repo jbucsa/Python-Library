@@ -16,7 +16,12 @@ This project shows the basics tools for creating routes using Flask in Python.
    
 ```pip install Flask```
 
-```pip install flask_sqlalchemy```      
+```pip install flask_sqlalchemy```     
+
+```pip install Flask-Migrate```
+
+```pip install psycopg2-binary```     
+
 
 3. Launch Flask
    
