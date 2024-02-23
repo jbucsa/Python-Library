@@ -22,8 +22,14 @@ This project shows the basics tools for creating routes using Flask in Python.
 
 ```pip install psycopg2-binary```     
 
+3. Database Migration
+```bash
+    flask db init             
+    flask db migrate            
+    flask db upgrade 
+```
 
-3. Launch Flask
+4. Launch Flask
    
 ```python -m flask run```
 
