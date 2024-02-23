@@ -17,6 +17,8 @@ venv\Scripts\activate.bat
 2. Install pip
    
 ```bash
+pip install python-dotenv
+
 pip install Flask
 
 pip install flask_sqlalchemy
@@ -29,9 +31,9 @@ pip install psycopg2-binary
 3. Database Migration
    
 ```bash
-    flask db init             
-    flask db migrate            
-    flask db upgrade 
+python -m flask db init             
+python -m flask db migrate            
+python -m flask db upgrade 
 ```
 
 4. Launch Flask

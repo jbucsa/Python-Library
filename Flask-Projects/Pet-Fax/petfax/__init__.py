@@ -1,13 +1,17 @@
 from flask import Flask
 from flask_migrate import Migrate 
 
+import dotenv
+
+dotenv.load_dotenv()
+
 # Factory 
           
 def create_app():
     app = Flask(__name__)
            
     # database config 
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://username:password@localhost:5432/Pet-Fax'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'DATABASE_URL'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     from . import models 
