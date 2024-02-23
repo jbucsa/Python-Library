@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='page.css') }}">
+
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form id="factsForm">
+            <label for="factName">Name:</label> <br>
+            <input type="text" id ="factName" name="factName"> <br>
+            <label for="fact">Fact:</label> <br>
+            <input type="text" id="fact" name="fact"> <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div>
+        <a href="{{ url_for('pet.index') }}"><button>Back to pets</button></a>
+    </div>
+</body>
+</html>

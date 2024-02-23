@@ -5,17 +5,10 @@ def create_app():
 
     @app.route('/')
     def hello():
-        return '!!Hola!! Mi PetFax'
+        return 'Hello!'
     
-    # This was originally ('/pets') before we created the pet.py file and the [from . import pet] route
-    @app.route('/Unknown')
-    def Unknown() :
-        return 'These are all the Flask Pet available for adoption. Limited Supply!!!!!'
-    
-    # Register Pet Blueprint
+    #register blueprint
     from . import pet
     app.register_blueprint(pet.bp)
 
-
-    # Return the app
     return app

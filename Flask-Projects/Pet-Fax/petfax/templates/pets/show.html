@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='page.css')}}">
+    <title>{{ pet.pet_name }}</title>
+</head>
+<body>
+    <div class="pet-info">
+         <h1>{{ pet.pet_name }}</h1>
+        <img src="{{ pet.pet_photo }}" alt="{{ pet.pet_name }}">
+        <p><strong>Fact:</strong> {{ pet.pet_fact }}</p>
+        <a href="{{ url_for('pet.index') }}"><button>Back to pets</button></a>
+    </div>
+</body>
+</html>
