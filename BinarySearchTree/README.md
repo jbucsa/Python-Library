@@ -8,7 +8,7 @@ When creating a BST, we are going to follow a similar process. We will first cre
 
 A linked list can be thought of as looking like this:
 
-![HeadToTailsLinks](img/HeadToTailsLinks.png style="max-height: 70px;" )
+![HeadToTailsLinks](img/HeadToTailsLinks.png)
 
 Each box is a node, and each node has two parts: the data, and the "next", or pointer to the next node.
 
