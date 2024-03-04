@@ -11,6 +11,8 @@ This project shows the basics tools for creating routes using Flask in Python.
 1. Launch the VENV envirnoment 
 
 ```bash
+py -m venv venv
+
 venv\Scripts\activate.bat
 ```
 
