@@ -1,3 +1,4 @@
+# First IMPORT pandas as pd to create a dataframe
 import pandas as pd
 
 # SELECTING Specific ROW in a Dataframe 'df'
