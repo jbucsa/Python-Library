@@ -3,7 +3,7 @@
 
 # Interview Questions
 
-This GitHub Repo contains topics that may be discussed for a role as a python developer.
+This GitHub Repo examples and concepts of python topics that may be discussed in an interview for a python developer role.
 
 
 
