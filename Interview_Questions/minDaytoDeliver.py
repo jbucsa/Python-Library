@@ -2,17 +2,26 @@
 
 def minDaysToDeliverParcels(parcels):
     """
-    This function calculates the minimum number of days required
-    to deliver all parcels from all delivery centers.
+    Simulates day-by-day parcel delivery until all centers have 0 parcels.
+    Returns the number of days required.
     """
-    # Use a set to remove duplicates and count unique positive delivery days
-    days_needed = len(set(parcels) - {0})
-    return days_needed
+    days = 0
+
+    while any(p > 0 for p in parcels):
+        # Find the minimum non-zero value (daily delivery amount)
+        min_nonzero = min(p for p in parcels if p > 0)
+
+        # Subtract that from all non-zero centers
+        parcels = [p - min_nonzero if p > 0 else 0 for p in parcels]
+
+        days += 1
+
+    return days
 
 if __name__ == '__main__':
     import os
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
-    
+
     parcels_count = int(input().strip())
     parcels = []
 
